@@ -1,0 +1,38 @@
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "live"
+
+profile = "dev"
+
+personality = "pragmatic"
+
+[projects."/Users/tomoko.uchida/repo"]
+trust_level = "trusted"
+
+
+[profiles.dev]
+approval_policy = "never"
+sandbox_mode    = "workspace-write"
+
+[profiles.full_auto]
+approval_policy = "on-request"
+sandbox_mode    = "workspace-write"
+
+[profiles.readonly]
+approval_policy = "never"
+sandbox_mode    = "read-only"
+
+[sandbox_workspace_write]
+network_access = true
+exclude_tmpdir_env_var = false  # Allow $TMPDIR
+exclude_slash_tmp = false       # Allow /tmp
+
+[mcp_servers.linear]
+url = "https://mcp.linear.app/mcp"
+
+[mcp_servers.github]
+url = "https://api.githubcopilot.com/mcp/"
+bearer_token_env_var = <PAT>
