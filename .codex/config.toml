@@ -1,9 +1,6 @@
 model = "gpt-5.4"
-model_reasoning_effort = "medium"
-#model_provider = "myollama"
-#model = "qwen3-coder-next"
+model_reasoning_effort = "middle"
 
-approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 web_search = "live"
 
@@ -11,17 +8,24 @@ profile = "dev"
 
 personality = "pragmatic"
 
-#[model_providers.myollama]
-#name = "My Ollama"
-#base_url = "http://localhost:11434/v1"
-#wire_api = "responses"
-#env_key = "OLLAMA_API_KEY"
+[model_providers.myollama]
+name = "My Ollama"
+base_url = "http://localhost:11434/v1"
+wire_api = "responses"
 
 [projects."/home/moco/repo"]
 trust_level = "trusted"
 
 
 [profiles.dev]
+approval_policy = "never"
+sandbox_mode    = "workspace-write"
+
+[profiles.dev_ollama]
+#model = "qwen3-coder:30b"
+#model = "glm-4.7-flash:q8_0"
+model = "gpt-oss:20b"
+model_provider = "myollama"
 approval_policy = "never"
 sandbox_mode    = "workspace-write"
 
