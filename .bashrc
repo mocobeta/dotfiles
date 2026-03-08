@@ -13,6 +13,8 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 export PS1='[\D{%H:%M} \W]$(__git_ps1 " (%s)")\$ '
 
+source $HOME/.local/bin/env 
+
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -23,10 +25,7 @@ eval "$(pyenv init - bash)"
 
 # Rust
 . "$HOME/.cargo/env"
-
-# uv
-source $HOME/.local/bin/env 
-
+ 
 # orbstack
 # source $HOME/.orbstack/shell/init.bash
 
@@ -49,12 +48,10 @@ alias sed='gsed'
 # direnv
 eval "$(direnv hook bash)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# node
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tomoko.uchida/google-cloud-sdk/path.bash.inc' ]; then . '/Users/tomoko.uchida/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/tomoko.uchida/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/tomoko.uchida/google-cloud-sdk/completion.bash.inc'; fi
+# Ollama
+#export OLLAMA_FLASH_ATTENTION=1
