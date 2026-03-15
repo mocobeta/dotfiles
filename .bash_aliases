@@ -6,4 +6,4 @@ alias less='bat --theme "Solarized (light)" --style=numbers'
 alias ps='procs --theme dark'
 alias du='dust'
 alias top='btm'
-alias sed='gsed'
+# alias sed='gsed'  # Mac-only
