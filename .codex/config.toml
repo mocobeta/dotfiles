@@ -1,31 +1,28 @@
 model = "gpt-5.4"
+# model = "qwen3-coder:30b"
+
 model_reasoning_effort = "medium"
+privider = "openai"
 
 sandbox_mode = "workspace-write"
 web_search = "live"
 
+project_root_markers = [".git", ".codex-root"]
 profile = "dev"
-
 personality = "pragmatic"
 
-[model_providers.myollama]
-name = "My Ollama"
-base_url = "http://localhost:11434/v1"
-wire_api = "responses"
+[provider_settings.openai]
+# base_url = "http://localhost:11434/v1"  # proxy endpoint. e.g. Local Ollama server
+api_key_env = "OPENAI_API_KEY"
 
 [projects."/home/moco/repo"]
 trust_level = "trusted"
 
+[projects."/home/moco/work"]
+trust_level = "trusted"
+priflie = "readonly"
 
 [profiles.dev]
-approval_policy = "never"
-sandbox_mode    = "workspace-write"
-
-[profiles.dev_ollama]
-#model = "qwen3-coder:30b"
-#model = "glm-4.7-flash:q8_0"
-model = "gpt-oss:20b"
-model_provider = "myollama"
 approval_policy = "never"
 sandbox_mode    = "workspace-write"
 
@@ -48,3 +45,7 @@ url = "https://mcp.linear.app/mcp"
 [mcp_servers.github]
 url = "https://api.githubcopilot.com/mcp/"
 bearer_token_env_var = "GITHUB_PAT_TOKEN"
+
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+http_headers = { "CONTEXT7_API_KEY" = "YOUR_API_KEY" }
