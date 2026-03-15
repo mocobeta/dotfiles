@@ -1,26 +1,23 @@
 model = "gpt-5.4"
-# model = "qwen3-coder:30b"
-
+#model = "qwen3-coder:30b"
 model_reasoning_effort = "medium"
-privider = "openai"
+#model_privider = "myollama"
 
 sandbox_mode = "workspace-write"
 web_search = "live"
 
 project_root_markers = [".git", ".codex-root"]
-profile = "dev"
+profile = "full_auto"
+
 personality = "pragmatic"
 
-[provider_settings.openai]
-# base_url = "http://localhost:11434/v1"  # proxy endpoint. e.g. Local Ollama server
-api_key_env = "OPENAI_API_KEY"
+#[model_providers.proxy]
+#name = "OpenAI using LLM proxy"
+#base_url = "http://localhost:11434/v1"
 
-[projects."/home/moco/repo"]
-trust_level = "trusted"
-
-[projects."/home/moco/work"]
-trust_level = "trusted"
-priflie = "readonly"
+[model_providers.myollama]
+name = "Ollama on local machine"
+base_url = "http://localhost:11434/v1"
 
 [profiles.dev]
 approval_policy = "never"
