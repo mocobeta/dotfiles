@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make Git Commit"
+  short_description: "Review changes and create a concise git commit"
+  default_prompt: "Use $make-git-commit to review the current git changes, summarize them, and commit them cleanly."
