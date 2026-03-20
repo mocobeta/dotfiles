@@ -6,15 +6,13 @@ prefix_rule(pattern = ["jq"],  decision = "allow")
 prefix_rule(pattern = ["curl"],  decision = "allow")
 prefix_rule(pattern = ["wget"],  decision = "allow")
 prefix_rule(pattern = ["docker"],  decision = "allow")
-prefix_rule(pattern = ["kubectl"],  decision = "allow")
+prefix_rule(pattern = ["kubectl", ["get", "explain", "describe", "logs", "attach", "exec", "port-forward", "debug", "events", "diff"]],  decision = "allow")
 prefix_rule(pattern=["go", "build"], decision="allow")
+prefix_rule(pattern=["npm"], decision="allow")
 prefix_rule(pattern = ["uv"],  decision = "allow")
 prefix_rule(pattern = ["PYTHONPATH=. uv"], decision = "allow")
 prefix_rule(
-    pattern = ["/bin/bash", "-lc", "PYTHONPATH=.", "uv", "run"],
+    pattern = ["/bin/bash", "-lc", "PYTHONPATH=. uv run"],
     decision = "allow",
     justification = "Allow local uv run with project-local PYTHONPATH",
-    match = [
-        "/bin/bash -lc PYTHONPATH=. uv run",
-    ],
 )
