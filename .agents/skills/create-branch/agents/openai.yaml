@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Branch"
+  short_description: "Create task branches from branch or issue context"
+  default_prompt: "Use $create-branch to create a branch from a base branch or issue-driven task."
