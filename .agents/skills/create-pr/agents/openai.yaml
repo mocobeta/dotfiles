@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create PR"
+  short_description: "Draft PRs with repo templates or a standard fallback"
+  default_prompt: "Use $create-pr to draft or open a pull request that follows the repository's template."
