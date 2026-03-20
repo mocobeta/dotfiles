@@ -24,6 +24,7 @@ Create a local branch from the repository root.
 - If the user gave a branch name, use it.
 - Otherwise, if the user gave an issue identifier, read the issue title/body from Linear or GitHub through the corresponding MCP server and infer a concise branch name.
 - Prefer stable prefixes such as `feature/`, `fix/`, `chore/`, `docs/`, `refactor/`, or `test/` when the issue context makes the type obvious.
+- Use `feature/` prefix when the task type is not given or ambiguous. Do not create a branch without a proper prefixes.
 - Slugify the descriptive part: lowercase, ASCII when possible, replace spaces and separators with `-`, collapse repeated `-`, trim leading/trailing `-`.
 - Keep the branch name short and readable.
 
@@ -59,6 +60,7 @@ Create a local branch from the repository root.
   - documentation -> `docs/...`
   - refactor -> `refactor/...`
   - test-only work -> `test/...`
+  - other/unknown -> `feature/...`
 - Build the slug from the task summary, not from noisy filler words.
 - Include the issue number in the branch only when it improves clarity or matches the repository convention.
 
