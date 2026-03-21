@@ -1,26 +1,29 @@
+profile = "dev"
+
 model = "gpt-5.4"
-#model = "qwen3-coder:30b"
 model_reasoning_effort = "medium"
-#model_privider = "myollama"
-#model_catalog_json = "/home/moco/.codex/catalogs/models-qwen3-ollama.json"
 
 sandbox_mode = "workspace-write"
 web_search = "live"
 
 project_root_markers = [".git", ".codex-root"]
-profile = "full_auto"
 
 personality = "pragmatic"
 
-#[model_providers.proxy]
-#name = "OpenAI using LLM proxy"
-#base_url = "http://localhost:11434/v1"
-
 [model_providers.myollama]
-name = "Ollama on local machine"
+name = "Ollama"
 base_url = "http://localhost:11434/v1"
+wire_api = "responses"
 
 [profiles.dev]
+approval_policy = "never"
+sandbox_mode = "workspace-write"
+
+[profiles.qwen3coder]
+model_provider = "myollama"
+model = "qwen3-coder:30b"
+model_catalog_json = "~/.codex/catalogs/models-qwen3-ollama.json"
+model_instructions_file = "~/.codex/qwen3coder-instructions.md"
 approval_policy = "never"
 sandbox_mode = "workspace-write"
 
@@ -48,7 +51,7 @@ enabled = false
 
 [mcp_servers.context7]
 url = "https://mcp.context7.com/mcp"
-http_headers = { "CONTEXT7_API_KEY" = "YOUR_API_KEY" }
+http_headers = { "CONTEXT7_API_KEY" = "<YOUR_API_KEY>" }
 enabled = true
 
 #[mcp_servers.ollama_search]
