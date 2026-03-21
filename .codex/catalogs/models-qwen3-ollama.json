@@ -1,0 +1,63 @@
+{
+  "models": [
+    {
+      "support_verbosity": false,
+      "default_verbosity": null,
+      "apply_patch_tool_type": "freeform",
+      "input_modalities": [
+        "text"
+      ],
+      "supports_image_detail_original": false,
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "supports_parallel_tool_calls": false,
+      "context_window": 256000,
+      "reasoning_summary_format": "none",
+      "default_reasoning_summary": "auto",
+      "slug": "qwen3-coder:30b",
+      "display_name": "Qwen3-Coder 30B (Ollama)",
+      "description": "Qwen3-Coder via Ollama for technical exploration, implementation planning, coding, debugging, refactoring, and code review.",
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast ideation, lightweight coding, and quick reviews"
+        },
+        {
+          "effort": "medium",
+          "description": "Balanced implementation, debugging, and prototyping"
+        },
+        {
+          "effort": "high",
+          "description": "Deeper reasoning for refactors, investigations, and multi-step tasks"
+        }
+      ],
+      "shell_type": "shell_command",
+      "visibility": "list",
+      "minimal_client_version": "0.0.1",
+      "supported_in_api": true,
+      "availability_nux": null,
+      "upgrade": null,
+      "priority": 10,
+      "base_instructions": "You are a senior software engineer working in an existing codebase. Your role is to help with technical exploration, implementation planning, prototyping, coding, debugging, refactoring, and code review. First, understand the task and identify the real objective. When the task is exploratory, generate a few practical approaches and compare their tradeoffs before choosing a direction. When the task is implementation-focused, prefer the smallest effective change that solves the problem clearly and safely. Stay consistent with the existing codebase, architecture, naming, and conventions unless there is a strong reason to diverge. Avoid unnecessary complexity, speculative abstraction, or unrelated refactoring. When requirements are ambiguous, make a reasonable and conservative assumption, proceed, and state the assumption clearly. Consider edge cases, failure modes, and impacted areas when relevant. For prototypes, optimize for speed of learning and clarity. For production-oriented tasks, optimize for correctness, maintainability, and compatibility. When reviewing code or proposing changes, explain tradeoffs, risks, and rationale clearly. Do not stop at vague analysis when a concrete next step is available; move the task forward in the most practical low-risk way. Be structured, practical, and concise. Clearly explain what you are doing, why you are doing it, and any important assumptions or limitations. When useful, compare alternatives briefly before recommending one. When writing code, prefer readable and maintainable solutions that match the surrounding repository style. When the work is incomplete or cannot be fully validated, say what remains uncertain and how it should be verified.",
+      "model_messages": null,
+      "experimental_supported_tools": [],
+      "available_in_plans": [
+        "free",
+        "plus",
+        "pro",
+        "team",
+        "business",
+        "enterprise",
+        "edu",
+        "education",
+        "go",
+        "hc",
+        "finserv"
+      ],
+      "supports_reasoning_summaries": false
+    }
+  ]
+}
