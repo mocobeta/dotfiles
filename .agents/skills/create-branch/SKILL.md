@@ -23,6 +23,8 @@ Create a local branch from the repository root.
 2. Determine the branch name.
 - If the user gave a branch name, use it.
 - Otherwise, if the user gave an issue identifier, read the issue title/body from Linear or GitHub through the corresponding MCP server and infer a concise branch name.
+- Do not use any default or auto-generated branch name suggested by Linear.
+- For Linear issues, always ignore Linear’s suggested branch name and regenerate the branch name from the issue title/body using this skill’s required prefix and slug rules.
 - Prefer stable prefixes such as `feature/`, `fix/`, `chore/`, `docs/`, `refactor/`, or `test/` when the issue context makes the type obvious.
 - Use `feature/` prefix when the task type is not given or ambiguous. Do not create a branch without a proper prefixes.
 - Slugify the descriptive part: lowercase, ASCII when possible, replace spaces and separators with `-`, collapse repeated `-`, trim leading/trailing `-`.
@@ -48,6 +50,13 @@ Create a local branch from the repository root.
 - Run `git rev-parse --verify <branch>`.
 - Run `git branch --list <branch>`.
 - When useful, show `git log --oneline -1 <branch>` to confirm the branch tip.
+
+## Branch Naming Policy
+
+- Branch names must always follow this skill’s naming convention.
+- Never use Linear’s default auto-generated branch name for an issue.
+- When a Linear issue is used as input, ignore any branch name suggested by Linear and generate a new branch name from the issue title/body using this skill’s prefix and slug rules.
+- This rule is mandatory and takes precedence over any default branch naming proposed by external systems.
 
 ## Issue-Based Branch Inference
 
