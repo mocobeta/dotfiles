@@ -1,4 +1,0 @@
-interface:
-  display_name: "Create Worktree"
-  short_description: "Create repo worktrees from branch or issue context"
-  default_prompt: "Use $create-worktree to add a worktree under worktrees/ for a branch or issue-driven task."
