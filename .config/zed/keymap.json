@@ -191,7 +191,7 @@
   },
   {
     "context": "Editor",
-    "unbind": {
+    "bindings": {
       "pageup": "editor::MovePageUp",
     },
   },
