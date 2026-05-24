@@ -21,37 +21,208 @@
   {
     "context": "Editor",
     "bindings": {
-      "alt-d": "editor::GoToDefinition"
-    }
+      "alt-d": "editor::GoToDefinition",
+    },
   },
   {
     "context": "Editor",
     "unbind": {
-      "f12": "editor::GoToDefinition"
-    }
+      "f12": "editor::GoToDefinition",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "alt-t": "editor::GoToTypeDefinition"
-    }
+      "alt-t": "editor::GoToTypeDefinition",
+    },
   },
   {
     "context": "Editor",
     "unbind": {
-      "cmd-f12": "editor::GoToTypeDefinition"
-    }
+      "cmd-f12": "editor::GoToTypeDefinition",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "alt-r": "editor::FindAllReferences"
-    }
+      "alt-r": "editor::FindAllReferences",
+    },
   },
   {
     "context": "Editor",
     "unbind": {
-      "alt-shift-f12": "editor::FindAllReferences"
-    }
-  }
+      "alt-shift-f12": "editor::FindAllReferences",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-p": "editor::MoveUp",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "up": "editor::MoveUp",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-b": "editor::MoveLeft",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "left": "editor::MoveLeft",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-f": "editor::MoveRight",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "right": "editor::MoveRight",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-n": "editor::MoveDown",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "down": "editor::MoveDown",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "pagedown": "editor::MovePageDown",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "pageup": "editor::MovePageUp",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-a": [
+        "editor::MoveToBeginningOfLine",
+        {
+          "stop_at_soft_wraps": true,
+          "stop_at_indent": true,
+        },
+      ],
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "home": [
+        "editor::MoveToBeginningOfLine",
+        {
+          "stop_at_soft_wraps": true,
+          "stop_at_indent": true,
+        },
+      ],
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-e": [
+        "editor::MoveToEndOfLine",
+        {
+          "stop_at_soft_wraps": true,
+        },
+      ],
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "end": [
+        "editor::MoveToEndOfLine",
+        {
+          "stop_at_soft_wraps": true,
+        },
+      ],
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-d": "editor::Delete",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "delete": "editor::Delete",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "editor::Backspace",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "shift-backspace": "editor::Backspace",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-k": "editor::CutToEndOfLine",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "pageup": "editor::MovePageUp",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-b": "editor::SelectLeft",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-left": "editor::SelectLeft",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-f": "editor::SelectRight",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-right": "editor::SelectRight",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-shift-a": "editor::SelectAll",
+    },
+  },
 ]
