@@ -220,39 +220,15 @@
     },
   },
   {
-    "context": "BufferSearchBar",
-    "bindings": {
-      "ctrl-shift-f": "search::FocusSearch"
-    }
-  },
-  {
-    "context": "BufferSearchBar",
-    "unbind": {
-      "find": "search::FocusSearch"
-    }
-  },
-  {
     "context": "Editor && mode == full",
     "bindings": {
-      "ctrl-shift-f": "buffer_search::Deploy"
-    }
-  },
-  {
-    "context": "Editor && mode == full",
-    "unbind": {
-      "find": "buffer_search::Deploy"
-    }
+      "alt-f": "buffer_search::Deploy",
+    },
   },
   {
     "context": "MarkdownPreview",
     "bindings": {
-      "ctrl-shift-f": "buffer_search::Deploy"
-    }
+      "alt-f": "buffer_search::Deploy",
+    },
   },
-  {
-    "context": "MarkdownPreview",
-    "unbind": {
-      "find": "buffer_search::Deploy"
-    }
-  }
 ]
