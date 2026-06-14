@@ -1,39 +1,21 @@
-profile = "dev"
-
-model = "gpt-5.4"
+model = "gpt-5.5"
 model_reasoning_effort = "medium"
+
+#model_provider = "myollama"
+#model = "qwen3.6:latest"
 
 sandbox_mode = "workspace-write"
 web_search = "live"
 
-project_root_markers = [".git", ".codex-root"]
-
+approval_policy = "never"
 personality = "pragmatic"
+
+project_root_markers = [".git", ".codex-root"]
 
 [model_providers.myollama]
 name = "Ollama"
 base_url = "http://localhost:11434/v1"
 wire_api = "responses"
-
-[profiles.dev]
-approval_policy = "never"
-sandbox_mode = "workspace-write"
-
-[profiles.qwen3coder]
-model_provider = "myollama"
-model = "qwen3-coder:30b"
-model_catalog_json = "~/.codex/catalogs/models-qwen3-ollama.json"
-model_instructions_file = "~/.codex/qwen3coder-instructions.md"
-approval_policy = "never"
-sandbox_mode = "workspace-write"
-
-[profiles.full_auto]
-approval_policy = "on-request"
-sandbox_mode = "workspace-write"
-
-[profiles.readonly]
-approval_policy = "never"
-sandbox_mode = "read-only"
 
 [sandbox_workspace_write]
 network_access = true
@@ -44,15 +26,8 @@ exclude_slash_tmp = false      # Allow /tmp
 url = "https://mcp.linear.app/mcp"
 enabled = true
 
-[mcp_servers.github]
-url = "https://api.githubcopilot.com/mcp/"
-bearer_token_env_var = "GITHUB_PAT_TOKEN"
-enabled = false
-
-[mcp_servers.context7]
-url = "https://mcp.context7.com/mcp"
-http_headers = { "CONTEXT7_API_KEY" = "<YOUR_API_KEY>" }
-enabled = true
+[tui.model_availability_nux]
+"gpt-5.5" = 4
 
 #[mcp_servers.ollama_search]
 #command = "uv"
