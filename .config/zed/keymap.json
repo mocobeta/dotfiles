@@ -220,15 +220,63 @@
     },
   },
   {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "ctrl-shift-f": "search::FocusSearch"
+    }
+  },
+  {
+    "context": "BufferSearchBar",
+    "unbind": {
+      "find": "search::FocusSearch"
+    }
+  },
+  {
     "context": "Editor && mode == full",
     "bindings": {
-      "alt-f": "buffer_search::Deploy",
-    },
+      "super-f": "buffer_search::Deploy"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "unbind": {
+      "find": "buffer_search::Deploy"
+    }
   },
   {
     "context": "MarkdownPreview",
     "bindings": {
-      "alt-f": "buffer_search::Deploy",
-    },
+      "super-f": "buffer_search::Deploy"
+    }
   },
+  {
+    "context": "MarkdownPreview",
+    "unbind": {
+      "find": "buffer_search::Deploy"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-space": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "MarkdownPreview",
+    "unbind": {
+      "ctrl-f": "buffer_search::Deploy"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "super-f": "buffer_search::Deploy"
+    }
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "ctrl-shift-f": "buffer_search::Deploy"
+    }
+  }
 ]
